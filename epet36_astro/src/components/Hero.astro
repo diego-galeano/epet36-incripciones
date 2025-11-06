@@ -1,0 +1,217 @@
+---
+// Hero Component
+---
+
+<section id="inicio" class="hero-wrapper">
+    <div class="hero">
+        <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                EPET N°36<br>
+                <span class="hero-subtitle">CONSTRUYAMOS</span><br>
+                <span class="hero-accent">TU FUTURO<br>JUNTOS!</span>
+            </h1>
+            <div class="hero-cta">
+                <div class="cta-bubble">
+                    <p class="cta-text-small">PREINSCRIPCIONES</p>
+                    <p class="cta-year">2026</p>
+                    <p class="cta-text-large">ABIERTAS</p>
+                </div>
+            </div>
+            <div class="hero-footer">
+                <h2>EDUCACIÓN TÉCNICA DE EXCELENCIA</h2>
+                <p class="hero-duration">6 AÑOS | TÍTULO NACIONAL</p>
+                <p class="hero-benefits">Becas | Pasantías | Tecnología de vanguardia</p>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Background image displays the student -->
+        </div>
+    </div>
+    </div>
+</section>
+
+<style>
+    .hero-wrapper {
+        background: linear-gradient(135deg, #ebecee, #caced1 100%);
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero {
+        background:
+            linear-gradient(135deg, rgba(245, 245, 245, 0) 0%, rgba(255, 255, 255, 0) 100%),
+            url('/image_hero.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        padding: 80px 0;
+        position: relative;
+        min-height: 600px;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .hero-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+
+    .hero-subtitle {
+        color: var(--text-dark);
+        font-weight: 700;
+    }
+
+    .hero-accent {
+        color: var(--primary-teal);
+        font-weight: 900;
+    }
+
+    .hero-cta {
+        margin: 30px 0;
+    }
+
+    .cta-bubble {
+        background: var(--primary-teal);
+        color: var(--white);
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(22, 114, 109, 0.3);
+    }
+
+    /*
+
+    .cta-bubble::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: var(--primary-teal);
+        border-radius: 50%;
+    }
+
+    .cta-bubble::after {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 40%;
+        width: 15px;
+        height: 15px;
+        background: var(--primary-teal);
+        border-radius: 50%;
+    }
+*/
+    .cta-text-small {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .cta-year {
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 1;
+        margin: 10px 0;
+    }
+
+    .cta-text-large {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .hero-footer {
+        background: var(--primary-teal);
+        color: var(--white);
+        padding: 30px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .hero-footer h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-duration {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .hero-benefits {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 400px;
+    }
+
+    @media (max-width: 968px) {
+        .hero {
+            min-height: 500px;
+        }
+
+        .hero-container {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+        }
+
+        .cta-bubble {
+            width: 200px;
+            height: 200px;
+        }
+
+        .cta-year {
+            font-size: 3rem;
+        }
+
+        .cta-text-large {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-wrapper {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+        }
+
+        .hero {
+            padding: 60px 0;
+            background: none;
+            min-height: auto;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-footer h2 {
+            font-size: 1.2rem;
+        }
+    }
+</style>

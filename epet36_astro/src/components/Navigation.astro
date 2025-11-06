@@ -1,0 +1,187 @@
+---
+// Navigation Component
+---
+
+<header class="header">
+    <div class="container">
+        <div class="logo-section">
+            <div class="logo">
+                <a href="/">
+                    <img src="/epet36_logo.jpg" alt="EPET N°36 Logo" class="logo-img" />
+                </a>
+            </div>
+            <div class="tagline">
+                <p>Formamos líderes técnicos con valores humanos.</p>
+            </div>
+        </div>
+        <nav class="nav" id="mobile-nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#orientaciones">Orientaciones</a>
+            <a href="#por-que-elegirnos">¿Por qué elegirnos?</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#inscripcion" class="btn-cta">Preinscripción 2026</a>
+        </nav>
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    menuToggle?.addEventListener('click', () => {
+        mobileNav?.classList.toggle('active');
+        menuToggle?.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    const navLinks = mobileNav?.querySelectorAll('a');
+    navLinks?.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav?.classList.remove('active');
+            menuToggle?.classList.remove('active');
+        });
+    });
+</script>
+
+<style>
+    .header {
+        background: var(--white, #FFFFFF);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 15px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo-img {
+        height: 60px;
+        width: auto;
+    }
+
+    .tagline {
+        border-left: 3px solid var(--primary-teal, #16726D);
+        padding-left: 15px;
+        max-width: 200px;
+    }
+
+    .tagline p {
+        color: var(--text-dark, #333333);
+        font-weight: 500;
+        font-size: 14px;
+        margin: 0;
+        font-style: italic;
+        line-height: 1.4;
+    }
+
+    .nav {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: var(--text-dark, #333333);
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .nav a:hover {
+        color: var(--primary-teal, #16726D);
+    }
+
+    .btn-cta {
+        background: var(--primary-orange, #FF6B35);
+        color: var(--white, #FFFFFF) !important;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+    .btn-cta:hover {
+        background: var(--dark-orange, #e85a25);
+    }
+
+    .mobile-menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .mobile-menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: var(--primary-teal, #16726D);
+        border-radius: 3px;
+        transition: all 0.3s;
+    }
+
+    @media (max-width: 968px) {
+        .tagline {
+            display: none;
+        }
+
+        .nav {
+            display: none;
+            position: fixed;
+            top: 90px;
+            left: 0;
+            right: 0;
+            background: var(--white, #FFFFFF);
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .nav.active {
+            display: flex;
+        }
+
+        .nav a {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .mobile-menu-toggle {
+            display: flex;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+    }
+</style>

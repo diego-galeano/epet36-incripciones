@@ -1,0 +1,28 @@
+/* EPET N°36 - Design System Colors */
+
+:root {
+    /* Primary Colors */
+    --primary-teal: #16726D;
+    --primary-orange: #FF6B35;
+
+    /* Teal Variations */
+    --dark-teal: #0D4B47;
+    --light-teal: #1E8E88;
+
+    /* Orange Variations */
+    --dark-orange: #e85a25;
+    --light-orange: #FF8A5B;
+
+    /* Neutral Colors */
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --gray: #CCCCCC;
+    --text-dark: #333333;
+    --text-light: #666666;
+
+    /* Semantic Colors */
+    --success: #28A745;
+    --warning: #FFC107;
+    --error: #DC3545;
+    --info: #17A2B8;
+}

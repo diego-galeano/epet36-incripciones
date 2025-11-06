@@ -1,0 +1,15 @@
+# Ignore everything at the root
+/*
+
+# But track the epet36_astro directory
+!/epet36_astro/
+
+# Standard ignores for the tracked directory
+epet36_astro/node_modules/
+epet36_astro/dist/
+epet36_astro/.env
+epet36_astro/.DS_Store
+epet36_astro/.astro/
+
+# Keep .gitignore itself
+!.gitignore
