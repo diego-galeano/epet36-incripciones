@@ -11,13 +11,15 @@
                     <span class="hero-subtitle">CONSTRUYAMOS</span><br />
                     <span class="hero-accent">TU FUTURO<br />JUNTOS!</span>
                 </h1>
-                <div class="hero-cta">
-                    <div class="cta-bubble">
-                        <p class="cta-text-small">PREINSCRIPCIONES</p>
-                        <p class="cta-year">2026</p>
-                        <p class="cta-text-large">ABIERTAS</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_6kCREOestKITOPzeVc72bSKKudOD7uqZxImUvCTVYGRaKw/viewform">
+                    <div class="hero-cta">
+                        <div class="cta-bubble">
+                            <p class="cta-text-small">PREINSCRIPCIONES</p>
+                            <p class="cta-year">2026</p>
+                            <p class="cta-text-large">ABIERTAS</p>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div class="hero-footer">
                     <h2>EDUCACIÓN TÉCNICA DE EXCELENCIA</h2>
                     <p class="hero-duration">6 AÑOS | TÍTULO NACIONAL</p>
@@ -85,6 +87,21 @@
         margin: 30px 0;
     }
 
+    .hero-cta a {
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .hero-cta a:hover {
+        transform: scale(1.05);
+    }
+
+    .hero-cta a:active {
+        transform: scale(0.98);
+    }
+
     .cta-bubble {
         background: var(--light-orange);
         color: var(--white);
@@ -97,6 +114,11 @@
         align-items: center;
         position: relative;
         box-shadow: 0 10px 30px rgba(22, 114, 109, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .hero-cta a:hover .cta-bubble {
+        box-shadow: 0 15px 40px rgba(22, 114, 109, 0.4);
     }
 
     .cta-text-small {
