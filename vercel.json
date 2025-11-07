@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd epet36_astro && npm run build",
+  "outputDirectory": "epet36_astro/dist",
+  "installCommand": "cd epet36_astro && npm install"
+}
