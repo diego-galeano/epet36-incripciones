@@ -16,7 +16,18 @@
         </div>
         <nav class="nav" id="mobile-nav">
             <a href="#inicio">Inicio</a>
-            <a href="#orientaciones">Orientaciones</a>
+            <div class="dropdown">
+                <button class="dropdown-toggle" id="oferta-toggle">
+                    Oferta Educativa
+                    <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                        <path d="M6 9L1 4h10L6 9z"/>
+                    </svg>
+                </button>
+                <div class="dropdown-menu" id="oferta-menu">
+                    <a href="#tecnologia-alimentos">Tecnología de los Alimentos</a>
+                    <a href="#gestion-organizacional">Gestión Organizacional</a>
+                </div>
+            </div>
             <a href="#por-que-elegirnos">¿Por qué elegirnos?</a>
             <a href="#contacto">Contacto</a>
             <a href="#inscripcion" class="btn-cta">Preinscripción 2026</a>
@@ -32,10 +43,27 @@
 <script>
     const menuToggle = document.getElementById('menu-toggle');
     const mobileNav = document.getElementById('mobile-nav');
+    const ofertaToggle = document.getElementById('oferta-toggle');
+    const ofertaMenu = document.getElementById('oferta-menu');
 
     menuToggle?.addEventListener('click', () => {
         mobileNav?.classList.toggle('active');
         menuToggle?.classList.toggle('active');
+    });
+
+    // Dropdown toggle functionality
+    ofertaToggle?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        ofertaMenu?.classList.toggle('active');
+        ofertaToggle?.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!ofertaToggle?.contains(e.target as Node) && !ofertaMenu?.contains(e.target as Node)) {
+            ofertaMenu?.classList.remove('active');
+            ofertaToggle?.classList.remove('active');
+        }
     });
 
     // Close menu when clicking on a link
@@ -44,6 +72,8 @@
         link.addEventListener('click', () => {
             mobileNav?.classList.remove('active');
             menuToggle?.classList.remove('active');
+            ofertaMenu?.classList.remove('active');
+            ofertaToggle?.classList.remove('active');
         });
     });
 </script>
@@ -122,6 +152,78 @@
         background: var(--dark-orange, #e85a25);
     }
 
+    /* Dropdown Styles */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-toggle {
+        background: none;
+        border: none;
+        color: var(--text-dark, #333333);
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.3s;
+        font-family: inherit;
+    }
+
+    .dropdown-toggle:hover {
+        color: var(--primary-teal, #16726D);
+    }
+
+    .dropdown-arrow {
+        transition: transform 0.3s;
+    }
+
+    .dropdown-toggle.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--white, #FFFFFF);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        min-width: 250px;
+        margin-top: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s;
+        z-index: 1001;
+    }
+
+    .dropdown-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 12px 20px;
+        color: var(--text-dark, #333333);
+        text-decoration: none;
+        transition: background 0.3s, color 0.3s;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .dropdown-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-menu a:hover {
+        background: var(--primary-teal-transparent, rgba(22, 114, 109, 0.1));
+        color: var(--primary-teal, #16726D);
+    }
+
     .mobile-menu-toggle {
         display: none;
         flex-direction: column;
@@ -166,6 +268,41 @@
         .nav a {
             padding: 12px;
             border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* Mobile dropdown styles */
+        .dropdown {
+            width: 100%;
+        }
+
+        .dropdown-toggle {
+            width: 100%;
+            justify-content: space-between;
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .dropdown-menu {
+            position: static;
+            box-shadow: none;
+            margin: 0;
+            padding-left: 20px;
+            border-radius: 0;
+            min-width: auto;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+
+        .dropdown-menu.active {
+            max-height: 200px;
+        }
+
+        .dropdown-menu a {
+            padding: 10px 12px;
+            font-size: 14px;
         }
 
         .mobile-menu-toggle {
