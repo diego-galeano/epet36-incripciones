@@ -1,0 +1,116 @@
+---
+// Specialty Card Component
+interface Props {
+    title: string;
+    content: string;
+    backgroundImage?: string;
+    imageAlt?: string;
+    useBackgroundImage?: boolean;
+    reverse?: boolean;
+}
+
+const {
+    title,
+    content,
+    backgroundImage,
+    imageAlt = title,
+    useBackgroundImage = false,
+    reverse = false
+} = Astro.props;
+---
+
+<article class={`specialty-card ${reverse ? 'specialty-card--reverse' : ''}`}>
+    {useBackgroundImage ? (
+        <div
+            class="specialty-image specialty-image--background"
+            style={`background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%), url('${backgroundImage}');`}
+        >
+            <h3 class="specialty-title">{title}</h3>
+        </div>
+    ) : (
+        <img
+            class="specialty-image"
+            src={backgroundImage}
+            alt={imageAlt}
+        />
+    )}
+    <div class="specialty-content">
+        {useBackgroundImage ? (
+            <p>{content}</p>
+        ) : (
+            <h3 class="specialty-title">{title}</h3>
+        )}
+    </div>
+</article>
+
+
+<style>
+    /* Specialty Card */
+	.specialty-card {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		align-items: center;
+		width: 100%;
+		color: var(--white);
+		text-align: center;
+	}
+
+	.specialty-card--reverse {
+		flex-direction: column-reverse;
+	}
+
+	.specialty-image {
+		width: 100%;
+		max-width: 600px;
+		height: auto;
+		object-fit: cover;
+		border-radius: 8px;
+	}
+
+	.specialty-image--background {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100%;
+		max-width: 600px;
+		min-height: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 8px;
+	}
+
+	.specialty-title {
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--white);
+	}
+
+	.specialty-content {
+		width: 100%;
+		max-width: 600px;
+		padding: 20px;
+	}
+
+	.specialty-content p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: var(--text-dark, #333333);
+	}
+
+	@media (max-width: 968px) {
+		.specialty-image--background {
+			min-height: 300px;
+			max-width: 100%;
+		}
+
+		.specialty-image {
+			max-width: 100%;
+		}
+
+		.specialty-title {
+			font-size: 1.5rem;
+		}
+	}
+</style>
