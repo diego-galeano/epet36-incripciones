@@ -74,8 +74,10 @@ import SpecialtyCard from '../components/SpecialtyCard.astro';
 
 	@media (max-width: 968px) {
 		.specialties-grid {
-			grid-template-columns: 1fr;
+			display: flex;
+			flex-direction: column;
 			gap: 40px;
+			align-items: center;
 		}
 
 		.section-title {
