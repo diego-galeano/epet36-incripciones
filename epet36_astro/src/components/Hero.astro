@@ -143,7 +143,6 @@
 
     .hero-footer {
         color: var(--white);
-        padding: 30px;
         margin: 0;
         width: 100%;
     }
@@ -165,13 +164,14 @@
 
     @media (max-width: 968px) {
         .hero {
-            min-height: 500px;
+            min-height: 600px;
+            background-position: center;
+            padding: 20px 0;
         }
 
         .hero-container {
             grid-template-columns: 1fr;
         }
-
         .hero-title {
             font-size: 2.5rem;
         }
@@ -196,9 +196,12 @@
         }
 
         .hero {
-            padding: 60px 0;
-            background: none;
-            min-height: auto;
+            padding: 40px 0;
+            background: url("../../public/home-bg.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
         }
 
         .hero-title {
@@ -207,6 +210,31 @@
 
         .hero-footer h2 {
             font-size: 1.2rem;
+            padding-top: 20px;
+        }
+
+        .cta-bubble {
+            width: 180px;
+            height: 180px;
+        }
+        .hero-cta {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            top: -50px;
+            right: 20px;
+        }
+
+        .cta-text-small {
+            font-size: 14px;
+        }
+
+        .cta-year {
+            font-size: 2.5rem;
+        }
+
+        .cta-text-large {
+            font-size: 1.3rem;
         }
     }
 </style>
