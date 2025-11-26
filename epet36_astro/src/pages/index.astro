@@ -23,9 +23,9 @@ import SpecialtyCard from '../components/SpecialtyCard.astro';
 		<Navigation />
 		<Hero />
 		<CTAAction />
-		<main class="oferta-educativa">
+		<main id="oferta-educativa" class="oferta-educativa">
 			<div class="container">
-				<h2 class="section-title">Oferta Educativa</h2>
+			<h2 class="section-title">Oferta Educativa</h2>
 
 				<div class="specialties-grid">
 					<!-- Tecnología de los Alimentos Card -->
@@ -34,6 +34,7 @@ import SpecialtyCard from '../components/SpecialtyCard.astro';
 							title="Tecnología de los Alimentos"
 							content="Formamos técnicos especializados en procesos de transformación, conservación y control de calidad de alimentos. Con laboratorios equipados y prácticas profesionalizantes en la industria alimentaria."
 							backgroundImage="/tecnologia-alimentos-img.jpg"
+							linkURL="https://docs.google.com/forms/d/e/1FAIpQLSf4YbkAXE9lWXIaLrnWZQETfm-jteA3llHx-ny4loYGF3-yJw/viewform"
 							useBackgroundImage={true}
 						/>
 					</div>
@@ -45,6 +46,7 @@ import SpecialtyCard from '../components/SpecialtyCard.astro';
 							content="Desarrollamos competencias en administración, contabilidad, recursos humanos y gestión empresarial. Preparamos líderes capaces de gestionar organizaciones de manera eficiente y sostenible."
 							backgroundImage="/gestion_organizacional_img.jpg"
 							useBackgroundImage={true}
+							linkURL="https://docs.google.com/forms/d/e/1FAIpQLSe_6kCREOestKITOPzeVc72bSKKudOD7uqZxImUvCTVYGRaKw/viewform"
 							reverse={true}
 						/>
 					</div>
@@ -53,11 +55,36 @@ import SpecialtyCard from '../components/SpecialtyCard.astro';
 		</main>
 	</body>
 </html>
+
+<script>
+	// Smooth scroll to oferta-educativa section with offset for title
+	document.addEventListener('DOMContentLoaded', () => {
+		const links = document.querySelectorAll('a[href="#oferta-educativa"]');
+
+		links.forEach(link => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault();
+				const target = document.getElementById('oferta-educativa');
+
+				if (target) {
+					const yOffset = -80; // Offset to show title with padding
+					const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+					window.scrollTo({
+						top: y,
+						behavior: 'smooth'
+					});
+				}
+			});
+		});
+	});
+</script>
+
 <style>
 	/* Oferta Educativa Section */
 	.oferta-educativa {
 		background-color: var(--light);
-		padding: 20px 0;
+		padding: 40px 0;
 		margin-bottom: 2rem;
 	}
 

@@ -5,6 +5,7 @@ interface Props {
     content: string;
     backgroundImage?: string;
     imageAlt?: string;
+	linkURL?: string;
     useBackgroundImage?: boolean;
     reverse?: boolean;
 }
@@ -14,6 +15,7 @@ const {
     content,
     backgroundImage,
     imageAlt = title,
+	linkURL = "#",
     useBackgroundImage = false,
     reverse = false
 } = Astro.props;
@@ -27,7 +29,7 @@ const {
         >
             <h3 class="specialty-title">{title}</h3>
             <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe_6kCREOestKITOPzeVc72bSKKudOD7uqZxImUvCTVYGRaKw/viewform"
+				href={linkURL}
                 class="cta-button"
                 target="_blank"
                 rel="noopener noreferrer"
