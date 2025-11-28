@@ -12,28 +12,64 @@
     <div class="container">
         <div class="title-wrapper">
             <div class="title-icon">
-                <svg width="60" height="60" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Outer circle -->
-                    <circle cx="100" cy="100" r="95" stroke="url(#gradient1)" stroke-width="4" fill="none"/>
-                    <!-- Inner decorative elements -->
-                    <circle cx="100" cy="100" r="70" fill="url(#gradient2)" opacity="0.2"/>
-                    <!-- Sparkle elements -->
-                    <path d="M100 20 L105 35 L120 40 L105 45 L100 60 L95 45 L80 40 L95 35 Z" fill="url(#gradient1)"/>
-                    <path d="M160 80 L163 88 L171 91 L163 94 L160 102 L157 94 L149 91 L157 88 Z" fill="url(#gradient1)"/>
-                    <path d="M40 120 L43 128 L51 131 L43 134 L40 142 L37 134 L29 131 L37 128 Z" fill="url(#gradient1)"/>
-                    <!-- Center icon -->
-                    <g transform="translate(100, 100)">
-                        <path d="M-15 -25 L0 -35 L15 -25 L15 0 L10 5 L10 15 L-10 15 L-10 5 L-15 0 Z" fill="currentColor"/>
-                        <circle cx="0" cy="-5" r="8" fill="url(#gradient2)"/>
-                        <rect x="-5" y="0" width="10" height="15" fill="url(#gradient1)" rx="2"/>
-                    </g>
+                <svg width="70" height="70" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Rocket body -->
+                    <path d="M100 20 L120 80 L120 130 L100 150 L80 130 L80 80 Z" fill="url(#gradient1)"/>
+                    <!-- Rocket window -->
+                    <circle cx="100" cy="70" r="15" fill="#ffffff" opacity="0.9"/>
+                    <circle cx="100" cy="70" r="10" fill="url(#gradient2)"/>
+                    <!-- Left fin -->
+                    <path d="M80 100 L60 140 L80 130 Z" fill="url(#gradient2)"/>
+                    <!-- Right fin -->
+                    <path d="M120 100 L140 140 L120 130 Z" fill="url(#gradient2)"/>
+                    <!-- Rocket nose -->
+                    <path d="M100 20 L85 60 L115 60 Z" fill="#06B6D4"/>
+                    <!-- Flame base -->
+                    <ellipse cx="100" cy="150" rx="20" ry="8" fill="#FF6B35" opacity="0.6">
+                        <animate attributeName="ry" values="8;12;8" dur="0.3s" repeatCount="indefinite"/>
+                    </ellipse>
+                    <!-- Flames -->
+                    <path d="M90 150 L85 165 L90 170 L95 160 Z" fill="#FF6B35">
+                        <animate attributeName="opacity" values="0.8;1;0.8" dur="0.5s" repeatCount="indefinite"/>
+                        <animate attributeName="d"
+                            values="M90 150 L85 165 L90 170 L95 160 Z;
+                                    M90 150 L83 168 L90 175 L97 162 Z;
+                                    M90 150 L85 165 L90 170 L95 160 Z"
+                            dur="0.4s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M100 150 L95 170 L100 180 L105 170 Z" fill="#F59E0B">
+                        <animate attributeName="opacity" values="1;0.7;1" dur="0.6s" repeatCount="indefinite"/>
+                        <animate attributeName="d"
+                            values="M100 150 L95 170 L100 180 L105 170 Z;
+                                    M100 150 L93 175 L100 190 L107 175 Z;
+                                    M100 150 L95 170 L100 180 L105 170 Z"
+                            dur="0.5s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M110 150 L105 160 L110 170 L115 165 Z" fill="#FF6B35">
+                        <animate attributeName="opacity" values="0.8;1;0.8" dur="0.4s" repeatCount="indefinite"/>
+                        <animate attributeName="d"
+                            values="M110 150 L105 160 L110 170 L115 165 Z;
+                                    M110 150 L103 162 L110 175 L117 168 Z;
+                                    M110 150 L105 160 L110 170 L115 165 Z"
+                            dur="0.3s" repeatCount="indefinite"/>
+                    </path>
+                    <!-- Sparkle stars -->
+                    <path d="M40 60 L43 68 L51 71 L43 74 L40 82 L37 74 L29 71 L37 68 Z" fill="url(#gradient1)">
+                        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M160 100 L162 105 L167 107 L162 109 L160 114 L158 109 L153 107 L158 105 Z" fill="url(#gradient1)">
+                        <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M150 50 L152 55 L157 57 L152 59 L150 64 L148 59 L143 57 L148 55 Z" fill="#06B6D4">
+                        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite"/>
+                    </path>
                     <!-- Gradient definitions -->
                     <defs>
                         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
                             <stop offset="0%" style="stop-color:#16726D;stop-opacity:1" />
                             <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
                         </linearGradient>
-                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
                             <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
                             <stop offset="100%" style="stop-color:#16726D;stop-opacity:1" />
                         </linearGradient>
@@ -199,25 +235,16 @@
     .title-icon {
         color: var(--primary-teal);
         margin-bottom: 30px;
-        animation: pulse 2s ease-in-out infinite, rotate 20s linear infinite;
+        animation: rocketFloat 3s ease-in-out infinite;
         filter: drop-shadow(0 5px 15px rgba(22, 114, 109, 0.3));
     }
 
-    @keyframes pulse {
+    @keyframes rocketFloat {
         0%, 100% {
-            transform: scale(1);
+            transform: translateY(0);
         }
         50% {
-            transform: scale(1.15);
-        }
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
+            transform: translateY(-20px);
         }
     }
 
