@@ -1,0 +1,443 @@
+---
+// WhyChooseUs Component - "¿Por qué elegirnos?"
+---
+
+<section class="why-choose-us">
+    <!-- Decorative shapes -->
+    <div class="deco-circle deco-circle-1"></div>
+    <div class="deco-circle deco-circle-2"></div>
+    <div class="deco-shape deco-shape-1"></div>
+    <div class="deco-shape deco-shape-2"></div>
+
+    <div class="container">
+        <div class="title-wrapper">
+            <div class="title-icon">
+                <svg width="60" height="60" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer circle -->
+                    <circle cx="100" cy="100" r="95" stroke="url(#gradient1)" stroke-width="4" fill="none"/>
+                    <!-- Inner decorative elements -->
+                    <circle cx="100" cy="100" r="70" fill="url(#gradient2)" opacity="0.2"/>
+                    <!-- Sparkle elements -->
+                    <path d="M100 20 L105 35 L120 40 L105 45 L100 60 L95 45 L80 40 L95 35 Z" fill="url(#gradient1)"/>
+                    <path d="M160 80 L163 88 L171 91 L163 94 L160 102 L157 94 L149 91 L157 88 Z" fill="url(#gradient1)"/>
+                    <path d="M40 120 L43 128 L51 131 L43 134 L40 142 L37 134 L29 131 L37 128 Z" fill="url(#gradient1)"/>
+                    <!-- Center icon -->
+                    <g transform="translate(100, 100)">
+                        <path d="M-15 -25 L0 -35 L15 -25 L15 0 L10 5 L10 15 L-10 15 L-10 5 L-15 0 Z" fill="currentColor"/>
+                        <circle cx="0" cy="-5" r="8" fill="url(#gradient2)"/>
+                        <rect x="-5" y="0" width="10" height="15" fill="url(#gradient1)" rx="2"/>
+                    </g>
+                    <!-- Gradient definitions -->
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#16726D;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#16726D;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="main-title">
+                <span class="title-part-1">¿POR QUÉ</span>
+                <span class="title-part-2">ELEGIRNOS?</span>
+            </h1>
+        </div>
+
+        <div class="features-grid">
+            <!-- Comunidad Educativa -->
+            <div class="feature-card">
+                <div class="feature-icon" style="background: var(--primary-orange);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45768C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Comunidad Educativa</h3>
+                <p class="feature-description">
+                    Somos una comunidad educativa que pone al alumno en el centro, fortaleciendo vínculos con empatía y respeto. Aquí no solo aprenderás: ¡crecerás como persona!
+                </p>
+            </div>
+
+            <!-- Oferta Única -->
+            <div class="feature-card">
+                <div class="feature-icon" style="background: var(--primary-orange);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Oferta Única</h3>
+                <p class="feature-subtitle">Entornos formativos con tecnología de punta:</p>
+                <ul class="feature-list">
+                    <li>Laboratorios modernos</li>
+                    <li>Sala de Industria</li>
+                    <li>Taller Empresarial</li>
+                    <li>Sala de Diseño</li>
+                    <li>Huerta escolar</li>
+                </ul>
+            </div>
+
+            <!-- Oportunidades Reales -->
+            <div class="feature-card">
+                <div class="feature-icon" style="background: var(--primary-orange);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="feature-title">Oportunidades reales</h3>
+                <p class="feature-subtitle">Entornos formativos con tecnología de punta:</p>
+                <ul class="feature-list">
+                    <li>Pasantías laborales</li>
+                    <li>Becas estudiantiles</li>
+                    <li>Talleres en contraturno</li>
+                    <li>Convenios con empresas y fundaciones</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .why-choose-us {
+        background: linear-gradient(135deg, #ebecee 0%, #ffffff 50%, #f5f5f5 100%);
+        padding: 100px 0;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Decorative elements */
+    .deco-circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.1;
+        z-index: 0;
+    }
+
+    .deco-circle-1 {
+        width: 400px;
+        height: 400px;
+        background: var(--primary-teal);
+        top: -100px;
+        left: -100px;
+        animation: float 20s ease-in-out infinite;
+    }
+
+    .deco-circle-2 {
+        width: 300px;
+        height: 300px;
+        background: #06B6D4;
+        bottom: -80px;
+        right: -80px;
+        animation: float 15s ease-in-out infinite reverse;
+    }
+
+    .deco-shape {
+        position: absolute;
+        opacity: 0.08;
+        z-index: 0;
+    }
+
+    .deco-shape-1 {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(45deg, var(--primary-teal), transparent);
+        top: 40%;
+        right: 10%;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        animation: morph 12s ease-in-out infinite;
+    }
+
+    .deco-shape-2 {
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(-45deg, #06B6D4, transparent);
+        bottom: 20%;
+        left: 5%;
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+        animation: morph 15s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-30px) rotate(5deg);
+        }
+    }
+
+    @keyframes morph {
+        0%, 100% {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+        50% {
+            border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .title-wrapper {
+        text-align: center;
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-icon {
+        color: var(--primary-teal);
+        margin-bottom: 30px;
+        animation: pulse 2s ease-in-out infinite, rotate 20s linear infinite;
+        filter: drop-shadow(0 5px 15px rgba(22, 114, 109, 0.3));
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.15);
+        }
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .main-title {
+        font-size: 4rem;
+        font-weight: 900;
+        line-height: 1.1;
+        margin: 0;
+        font-family: 'Montserrat', 'Roboto', sans-serif;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title-part-1 {
+        color: var(--text-dark);
+        font-weight: 700;
+        font-size: 0.8em;
+    }
+
+    .title-part-2 {
+        color: var(--primary-teal);
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--primary-teal), #06B6D4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .main-title::after {
+        content: '';
+        display: block;
+        width: 150px;
+        height: 5px;
+        background: linear-gradient(90deg, var(--primary-teal), #06B6D4);
+        margin: 20px auto 0;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(22, 114, 109, 0.3);
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        background: var(--white);
+        padding: 50px;
+        border-radius: 24px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        border: 2px solid transparent;
+    }
+
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: #06B6D4;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 60px rgba(6, 182, 212, 0.25);
+        border-color: #06B6D4;
+    }
+
+    .feature-card:hover::before {
+        opacity: 1;
+    }
+
+    .feature-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .feature-icon::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: inherit;
+        opacity: 0.3;
+        animation: ripple 2s ease-out infinite;
+    }
+
+    @keyframes ripple {
+        0% {
+            transform: scale(1);
+            opacity: 0.3;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    .feature-card:hover .feature-icon {
+        transform: scale(1.1) rotate(10deg);
+        box-shadow: 0 12px 30px rgba(255, 107, 53, 0.5);
+    }
+
+    .feature-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-teal);
+        margin-bottom: 15px;
+        font-family: 'Montserrat', 'Roboto', sans-serif;
+    }
+
+    .feature-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: var(--text-dark);
+    }
+
+    .feature-subtitle {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-bottom: 15px;
+    }
+
+    .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .feature-list li {
+        font-size: 1.05rem;
+        color: var(--text-dark);
+        padding: 14px 20px;
+        padding-left: 50px;
+        position: relative;
+        background: rgba(6, 182, 212, 0.05);
+        margin-bottom: 12px;
+        border-radius: 12px;
+        border-left: 4px solid #06B6D4;
+        transition: all 0.3s ease;
+    }
+
+    .feature-list li:hover {
+        background: rgba(6, 182, 212, 0.12);
+        transform: translateX(5px);
+        border-left-color: #0891B2;
+    }
+
+    .feature-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: #06B6D4;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    @media (max-width: 968px) {
+        .why-choose-us {
+            padding: 60px 0;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+        }
+
+        .feature-card {
+            padding: 30px 20px;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .main-title {
+            font-size: 2rem;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .feature-card {
+            padding: 25px 15px;
+        }
+
+        .feature-list li {
+            font-size: 0.95rem;
+        }
+    }
+</style>
