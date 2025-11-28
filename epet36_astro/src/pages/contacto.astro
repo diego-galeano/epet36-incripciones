@@ -1,0 +1,361 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+		<title>Contacto | EPET N°36</title>
+		<meta name="description" content="Contactá con EPET N°36. Ubicación, horarios de atención y toda la información para comunicarte con nosotros." />
+	</head>
+	<body>
+		<Navigation />
+
+		<main class="contact-page">
+			<!-- Header Section -->
+			<section class="contact-header">
+				<div class="container">
+					<h1 class="page-title">Contacto</h1>
+					<p class="page-subtitle">Estamos aquí para ayudarte. Contactanos por cualquier consulta sobre nuestras especialidades y proceso de inscripción.</p>
+				</div>
+			</section>
+
+			<!-- Contact Info & Map Section -->
+			<section class="contact-content">
+				<div class="container">
+					<div class="contact-grid">
+						<!-- Contact Information -->
+						<div class="contact-info-section">
+							<div class="info-card">
+								<div class="info-icon">📍</div>
+								<h3>Dirección</h3>
+								<p>Avenida 131 entre calles 176 y 178<br />Itaembé Miní, Posadas<br />Misiones, Argentina</p>
+							</div>
+
+							<div class="info-card">
+								<div class="info-icon">📞</div>
+								<h3>Teléfono</h3>
+								<p><a href="tel:4402533">Tel: 4402533</a></p>
+							</div>
+
+							<div class="info-card">
+								<div class="info-icon">✉️</div>
+								<h3>Email</h3>
+								<p><a href="mailto:epet36posadas@gmail.com">epet36posadas@gmail.com</a></p>
+							</div>
+
+							<div class="info-card">
+								<div class="info-icon">📱</div>
+								<h3>Redes Sociales</h3>
+								<p>
+									<a href="https://www.instagram.com/EPET36Posadas" target="_blank" rel="noopener noreferrer">
+										@EPET36Posadas
+									</a>
+								</p>
+							</div>
+
+							<div class="info-card">
+								<div class="info-icon">🕒</div>
+								<h3>Horario de Atención</h3>
+								<p>Lunes a Viernes<br />8:00 - 12:00 y 14:00 - 18:00</p>
+							</div>
+						</div>
+
+						<!-- Map Section -->
+						<div class="map-section">
+							<h3>¿Cómo llegar?</h3>
+							<div class="map-container">
+								<iframe
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.7827654891895!2d-55.95184868441658!3d-27.419259082913084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457bc3a581c086b%3A0x48acb08eba5e9f81!2sE.P.E.T%20N%C2%B036!5e0!3m2!1ses!2sar!4v1701234567890!5m2!1ses!2sar"
+									width="100%"
+									height="450"
+									style="border:0; border-radius: 15px;"
+									allowfullscreen=""
+									loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade"
+									title="Mapa de ubicación de EPET N°36"
+								></iframe>
+							</div>
+							<a
+								href="https://maps.app.goo.gl/75fPnaxXzJpnCqZY8"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="directions-button"
+							>
+								Ver indicaciones en Google Maps
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="cta-section">
+				<div class="container">
+					<h2>¿Listo para comenzar tu futuro técnico?</h2>
+					<p>Las preinscripciones para 2026 están abiertas. Elegí tu especialidad y completá el formulario.</p>
+					<div class="cta-buttons">
+						<a href="/tecnologia-alimentos" class="cta-button">Tecnología de los Alimentos</a>
+						<a href="/gestion-organizacional" class="cta-button">Gestión Organizacional</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.contact-page {
+		background: var(--light);
+	}
+
+	/* Header Section */
+	.contact-header {
+		padding: 80px 0 60px;
+		background: linear-gradient(135deg, var(--primary-teal), #06B6D4);
+		color: var(--white);
+		text-align: center;
+	}
+
+	.page-title {
+		font-size: 4rem;
+		font-weight: 900;
+		margin-bottom: 20px;
+		font-family: 'Montserrat', 'Roboto', sans-serif;
+	}
+
+	.page-subtitle {
+		font-size: 1.3rem;
+		max-width: 700px;
+		margin: 0 auto;
+		line-height: 1.6;
+		opacity: 0.95;
+	}
+
+	/* Contact Content */
+	.contact-content {
+		padding: 80px 0;
+		background: var(--white);
+	}
+
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 1fr 1.2fr;
+		gap: 60px;
+		align-items: start;
+	}
+
+	/* Contact Info Cards */
+	.contact-info-section {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+	}
+
+	.info-card {
+		background: var(--white);
+		padding: 25px;
+		border-radius: 15px;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.info-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 25px rgba(22, 114, 109, 0.15);
+	}
+
+	.info-icon {
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+	}
+
+	.info-card h3 {
+		font-size: 1.4rem;
+		font-weight: 700;
+		color: var(--primary-teal);
+		margin-bottom: 10px;
+		font-family: 'Montserrat', 'Roboto', sans-serif;
+	}
+
+	.info-card p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: var(--text-dark);
+		margin: 0;
+	}
+
+	.info-card a {
+		color: var(--primary-teal);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.info-card a:hover {
+		color: var(--primary-orange);
+	}
+
+	/* Map Section */
+	.map-section {
+		background: var(--white);
+		padding: 30px;
+		border-radius: 20px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	}
+
+	.map-section h3 {
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--primary-teal);
+		margin-bottom: 25px;
+		font-family: 'Montserrat', 'Roboto', sans-serif;
+	}
+
+	.map-container {
+		margin-bottom: 20px;
+		overflow: hidden;
+		border-radius: 15px;
+	}
+
+	.directions-button {
+		display: inline-block;
+		width: 100%;
+		padding: 15px 30px;
+		background: var(--primary-orange);
+		color: var(--white);
+		text-decoration: none;
+		border-radius: 10px;
+		font-size: 1.1rem;
+		font-weight: 600;
+		text-align: center;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+	}
+
+	.directions-button:hover {
+		background: var(--primary-teal);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(22, 114, 109, 0.4);
+	}
+
+	/* CTA Section */
+	.cta-section {
+		padding: 80px 0;
+		background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);
+		text-align: center;
+	}
+
+	.cta-section h2 {
+		font-size: 2.8rem;
+		font-weight: 800;
+		color: var(--primary-teal);
+		margin-bottom: 20px;
+		font-family: 'Montserrat', 'Roboto', sans-serif;
+	}
+
+	.cta-section p {
+		font-size: 1.3rem;
+		color: var(--text-dark);
+		margin-bottom: 40px;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.cta-button {
+		display: inline-block;
+		padding: 18px 40px;
+		background: var(--primary-orange);
+		color: var(--white);
+		text-decoration: none;
+		border-radius: 50px;
+		font-size: 1.2rem;
+		font-weight: 700;
+		transition: all 0.3s ease;
+		box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+	}
+
+	.cta-button:hover {
+		background: var(--primary-teal);
+		transform: translateY(-3px);
+		box-shadow: 0 15px 40px rgba(22, 114, 109, 0.5);
+	}
+
+	@media (max-width: 968px) {
+		.page-title {
+			font-size: 2.5rem;
+		}
+
+		.page-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.contact-grid {
+			grid-template-columns: 1fr;
+			gap: 40px;
+		}
+
+		.cta-section h2 {
+			font-size: 2.2rem;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.cta-button {
+			width: 100%;
+			max-width: 400px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.contact-header {
+			padding: 60px 0 40px;
+		}
+
+		.page-title {
+			font-size: 2rem;
+		}
+
+		.page-subtitle {
+			font-size: 1rem;
+		}
+
+		.contact-content {
+			padding: 60px 0;
+		}
+
+		.map-section {
+			padding: 20px;
+		}
+
+		.cta-section {
+			padding: 60px 0;
+		}
+
+		.cta-section h2 {
+			font-size: 1.8rem;
+		}
+
+		.cta-section p {
+			font-size: 1.1rem;
+		}
+	}
+</style>

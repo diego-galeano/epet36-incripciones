@@ -47,7 +47,7 @@
 
 <style>
     .footer {
-        background: var(--primary-teal);
+        background: linear-gradient(135deg, var(--primary-teal) 0%, #0d8f8a 100%);
         color: var(--white);
         padding: 60px 0 20px;
     }
@@ -64,6 +64,11 @@
 
     .location-section {
         text-align: left;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .location-section h3 {
@@ -84,6 +89,11 @@
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .contact-section h3 {
@@ -122,6 +132,11 @@
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .social-section h3 {
@@ -143,11 +158,13 @@
         font-size: 1.2rem;
         font-weight: 600;
         transition: all 0.3s ease;
+        background: rgba(255, 107, 53, 0.2);
     }
 
     .social-badge:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--primary-orange);
         transform: translateX(5px);
+        border-color: var(--primary-orange);
     }
 
     .social-badge svg {
