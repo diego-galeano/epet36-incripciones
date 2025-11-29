@@ -4,7 +4,7 @@
 
 <footer class="footer">
     <div class="footer-content">
-        <div class="location-section">
+        <div class="section location-section">
             <iframe
                 class="map-background"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.7827654891895!2d-55.95184868441658!3d-27.419259082913084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457bc3a581c086b%3A0x48acb08eba5e9f81!2sE.P.E.T%20N%C2%B036!5e0!3m2!1ses!2sar!4v1701234567890!5m2!1ses!2sar"
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <div class="contact-section">
+        <div class="section contact-section">
             <h3>Comunicate con nosotros!</h3>
 
             <div class="contact-info">
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="social-section">
+        <div class="section social-section">
             <h3>Seguinos en nuestras redes!</h3>
             <a href="https://www.instagram.com/EPET36Posadas" target="_blank" rel="noopener noreferrer" class="social-badge">
                 <span>@EPET36Posadas</span>
@@ -75,13 +75,14 @@
         gap: 60px;
         align-items: stretch;
     }
-
+    .section {
+        min-height: 16rem;
+    }
     .location-section {
         position: relative;
         overflow: hidden;
         border-radius: 15px;
         height: 100%;
-        min-height: 300px;
     }
 
     .map-background {
