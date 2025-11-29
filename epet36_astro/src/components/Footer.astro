@@ -76,7 +76,7 @@
         align-items: stretch;
     }
     .section {
-        min-height: 16rem;
+        min-height: 18rem;
     }
     .location-section {
         position: relative;
@@ -156,7 +156,6 @@
     .contact-section {
         display: flex;
         flex-direction: column;
-        gap: 20px;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -171,14 +170,14 @@
     .contact-section h3 {
         font-size: 1.8rem;
         font-weight: 700;
-        margin-bottom: 20px;
         font-family: 'Montserrat', 'Roboto', sans-serif;
+        margin-bottom: 20px;
     }
 
     .contact-info {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        margin-bottom: -20px;
     }
 
     .contact-item {
@@ -188,15 +187,28 @@
         color: var(--white);
         text-decoration: none;
         font-size: 1.2rem;
-        transition: opacity 0.3s ease;
+        padding: 12px 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        position: relative;
     }
 
     .contact-item:hover {
-        opacity: 0.8;
+        background: rgba(255, 107, 53, 0.2);
+        transform: translateX(5px);
+    }
+
+    .contact-item:active {
+        transform: translateX(2px);
     }
 
     .contact-item svg {
         flex-shrink: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-item:hover svg {
+        transform: scale(1.1);
     }
 
     .social-section {
