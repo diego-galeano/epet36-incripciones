@@ -219,15 +219,17 @@ import '../styles/global.css';
 	.contact-info-section {
 		display: flex;
 		flex-direction: column;
-		gap: 25px;
+		justify-content: space-between;
+		gap: 32px;
 	}
 
 	.info-card {
 		background: var(--white);
-		padding: 25px;
+		padding: 35px 25px;
 		border-radius: 15px;
 		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		min-height: 9rem;
 	}
 
 	.info-card:hover {
