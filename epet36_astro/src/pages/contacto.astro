@@ -1,6 +1,5 @@
 ---
 import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 ---
 
@@ -36,26 +35,22 @@ import '../styles/global.css';
 						<!-- Contact Information -->
 						<div class="contact-info-section">
 							<div class="info-card">
-								<div class="info-icon">📍</div>
-								<h3>Dirección</h3>
+								<h3><span class="info-icon">📍</span>Dirección</h3>
 								<p>Avenida 131 entre calles 176 y 178<br />Itaembé Miní, Posadas<br />Misiones, Argentina</p>
 							</div>
 
 							<div class="info-card">
-								<div class="info-icon">📞</div>
-								<h3>Teléfono</h3>
+								<h3><span class="info-icon">📞</span>Teléfono</h3>
 								<p><a href="tel:4402533">Tel: 4402533</a></p>
 							</div>
 
 							<div class="info-card">
-								<div class="info-icon">✉️</div>
-								<h3>Email</h3>
+								<h3><span class="info-icon">✉️</span>Email</h3>
 								<p><a href="mailto:epet36posadas@gmail.com">epet36posadas@gmail.com</a></p>
 							</div>
 
 							<div class="info-card">
-								<div class="info-icon">📱</div>
-								<h3>Redes Sociales</h3>
+								<h3><span class="info-icon">📱</span>Redes Sociales</h3>
 								<p>
 									<a href="https://www.instagram.com/EPET36Posadas" target="_blank" rel="noopener noreferrer">
 										@EPET36Posadas
@@ -64,10 +59,10 @@ import '../styles/global.css';
 							</div>
 
 							<div class="info-card">
-								<div class="info-icon">🕒</div>
-								<h3>Horario de Atención</h3>
-								<p>Lunes a Viernes<br />8:00 - 12:00 y 14:00 - 18:00</p>
+								<h3><span class="info-icon">🕒</span>Horario de Atención</h3>
+								<p>Lunes a Viernes 7:00 - 21:30</p>
 							</div>
+
 						</div>
 
 						<!-- Map Section -->
@@ -85,6 +80,19 @@ import '../styles/global.css';
 									title="Mapa de ubicación de EPET N°36"
 								></iframe>
 							</div>
+
+							<div class="transport-info">
+								<div class="transport-icon">🚌</div>
+								<p class="transport-label"><strong>Líneas de colectivo:</strong></p>
+								<div class="bus-lines">
+									<span class="bus-number">12</span>
+									<span class="bus-number">17</span>
+									<span class="bus-number">18</span>
+									<span class="bus-number">19</span>
+								</div>
+								<p class="bus-stop">Parada: Avenida 131 y Calle 176</p>
+							</div>
+
 							<a
 								href="https://maps.app.goo.gl/75fPnaxXzJpnCqZY8"
 								target="_blank"
@@ -93,6 +101,44 @@ import '../styles/global.css';
 							>
 								Ver indicaciones en Google Maps
 							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ Section -->
+			<section class="faq-section">
+				<div class="container">
+					<h2 class="section-title">Preguntas Frecuentes</h2>
+					<div class="faq-grid">
+						<div class="faq-item">
+							<h3>¿Cuándo son las preinscripciones?</h3>
+							<p>Las preinscripciones para el ciclo lectivo 2026 están abiertas. Podés completar el formulario online en cualquier momento y luego presentar la documentación en secretaría.</p>
+						</div>
+
+						<div class="faq-item">
+							<h3>¿Qué documentación necesito?</h3>
+							<p>Para la inscripción necesitás: DNI del alumno y padres/tutores, partida de nacimiento, certificado de estudios del nivel primario, libreta sanitaria actualizada, y 2 fotos 4x4.</p>
+						</div>
+
+						<div class="faq-item">
+							<h3>¿La escuela tiene comedor?</h3>
+							<p>Sí, la escuela cuenta con servicio de comedor escolar para todos los alumnos durante el horario de almuerzo.</p>
+						</div>
+
+						<div class="faq-item">
+							<h3>¿Ofrecen becas?</h3>
+							<p>Sí, contamos con un programa de becas escolares. Consultá en secretaría sobre los requisitos y el proceso de solicitud.</p>
+						</div>
+
+						<div class="faq-item">
+							<h3>¿Cuál es la duración de la carrera?</h3>
+							<p>La formación técnica tiene una duración de 6 años y otorga título de Técnico con validez nacional al finalizar.</p>
+						</div>
+
+						<div class="faq-item">
+							<h3>¿Realizan visitas guiadas?</h3>
+							<p>Sí, organizamos jornadas de puertas abiertas. Contactanos por teléfono o email para coordinar una visita a nuestras instalaciones.</p>
 						</div>
 					</div>
 				</div>
@@ -111,7 +157,20 @@ import '../styles/global.css';
 			</section>
 		</main>
 
-		<Footer />
+		<!-- Mini Footer -->
+		<footer class="mini-footer">
+			<div class="container">
+				<div class="mini-footer-content">
+					<p>&copy; 2025 EPET N°36 - Itaembé Miní - Posadas, Misiones</p>
+					<div class="mini-footer-links">
+						<a href="/">Inicio</a>
+						<a href="/especialidades">Especialidades</a>
+						<a href="/por-que-elegirnos">¿Por qué elegirnos?</a>
+						<a href="https://www.instagram.com/EPET36Posadas" target="_blank" rel="noopener noreferrer">Instagram</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
 
@@ -136,7 +195,7 @@ import '../styles/global.css';
 	}
 
 	.page-subtitle {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		max-width: 700px;
 		margin: 0 auto;
 		line-height: 1.6;
@@ -176,17 +235,20 @@ import '../styles/global.css';
 		box-shadow: 0 8px 25px rgba(22, 114, 109, 0.15);
 	}
 
-	.info-icon {
-		font-size: 2.5rem;
-		margin-bottom: 10px;
-	}
-
 	.info-card h3 {
 		font-size: 1.4rem;
 		font-weight: 700;
 		color: var(--primary-teal);
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		font-family: 'Montserrat', 'Roboto', sans-serif;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+
+	.info-icon {
+		font-size: 2rem;
+		flex-shrink: 0;
 	}
 
 	.info-card p {
@@ -223,9 +285,67 @@ import '../styles/global.css';
 	}
 
 	.map-container {
-		margin-bottom: 20px;
+		margin-bottom: 25px;
 		overflow: hidden;
 		border-radius: 15px;
+	}
+
+	/* Transport Info inside Map Section */
+	.transport-info {
+		background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+		padding: 25px;
+		border-radius: 15px;
+		margin-bottom: 20px;
+		text-align: center;
+		border: 2px solid var(--light-teal);
+	}
+
+	.transport-icon {
+		font-size: 2.5rem;
+		margin-bottom: 10px;
+	}
+
+	.transport-label {
+		font-size: 1.1rem;
+		color: var(--lig-teal);
+		margin-bottom: 15px;
+	}
+
+	.bus-lines {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+	}
+
+	.bus-number {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 45px;
+		height: 45px;
+		padding: 8px 12px;
+		background: var(--primary-teal);
+		color: var(--white);
+		font-weight: 700;
+		font-size: 1.2rem;
+		border-radius: 8px;
+		box-shadow: 0 3px 10px rgba(22, 114, 109, 0.3);
+		transition: all 0.3s ease;
+	}
+
+	.bus-number:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 5px 15px rgba(22, 114, 109, 0.4);
+		background: var(--primary-orange);
+	}
+
+	.bus-stop {
+		font-size: 0.95rem;
+		color: var(--text-dark);
+		opacity: 0.85;
+		margin: 0;
 	}
 
 	.directions-button {
@@ -247,6 +367,57 @@ import '../styles/global.css';
 		background: var(--primary-teal);
 		transform: translateY(-2px);
 		box-shadow: 0 6px 20px rgba(22, 114, 109, 0.4);
+	}
+
+	/* FAQ Section */
+	.faq-section {
+		padding: 80px 0;
+		background: #f8f9fa;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		font-weight: 800;
+		color: var(--primary-teal);
+		text-align: center;
+		margin-bottom: 60px;
+		font-family: 'Montserrat', 'Roboto', sans-serif;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		background: var(--white);
+		padding: 30px;
+		border-radius: 15px;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.faq-item:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 25px rgba(22, 114, 109, 0.15);
+	}
+
+	.faq-item h3 {
+		font-size: 1.3rem;
+		font-weight: 700;
+		color: var(--primary-teal);
+		margin-bottom: 15px;
+		font-family: 'Montserrat', 'Roboto', sans-serif;
+	}
+
+	.faq-item p {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--text-dark);
+		margin: 0;
 	}
 
 	/* CTA Section */
@@ -310,6 +481,15 @@ import '../styles/global.css';
 			gap: 40px;
 		}
 
+		.section-title {
+			font-size: 2.5rem;
+		}
+
+		.faq-grid {
+			grid-template-columns: 1fr;
+			gap: 25px;
+		}
+
 		.cta-section h2 {
 			font-size: 2.2rem;
 		}
@@ -346,6 +526,32 @@ import '../styles/global.css';
 			padding: 20px;
 		}
 
+		.bus-number {
+			min-width: 40px;
+			height: 40px;
+			font-size: 1.1rem;
+		}
+
+		.section-title {
+			font-size: 2rem;
+		}
+
+		.faq-section {
+			padding: 60px 0;
+		}
+
+		.faq-item {
+			padding: 25px;
+		}
+
+		.faq-item h3 {
+			font-size: 1.2rem;
+		}
+
+		.faq-item p {
+			font-size: 0.95rem;
+		}
+
 		.cta-section {
 			padding: 60px 0;
 		}
@@ -357,5 +563,58 @@ import '../styles/global.css';
 		.cta-section p {
 			font-size: 1.1rem;
 		}
+
+		.mini-footer-content {
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		.mini-footer-links {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	/* Mini Footer */
+	.mini-footer {
+		background: linear-gradient(135deg, var(--primary-teal) 0%, #0d8f8a 100%);
+		color: var(--white);
+		padding: 40px 0;
+		margin-top: 0;
+	}
+
+	.mini-footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	.mini-footer-content p {
+		margin: 0;
+		font-size: 0.95rem;
+		opacity: 0.9;
+	}
+
+	.mini-footer-links {
+		display: flex;
+		gap: 25px;
+		flex-wrap: wrap;
+	}
+
+	.mini-footer-links a {
+		color: var(--white);
+		text-decoration: none;
+		font-size: 0.95rem;
+		font-weight: 500;
+		transition: all 0.3s ease;
+		opacity: 0.9;
+	}
+
+	.mini-footer-links a:hover {
+		opacity: 1;
+		color: var(--primary-orange);
+		transform: translateY(-2px);
 	}
 </style>
