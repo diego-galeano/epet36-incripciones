@@ -53,7 +53,8 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2025 EPET N°36 - Itaembé Miní - Posadas</p>
+        <p>&copy; 2025 EPET N°36 - Itaembé Miní - Posadas • </p>
+        <a href="https://www.fullai.dev" target="_blank">fullai.dev<a>
     </div>
 </footer>
 
@@ -235,6 +236,10 @@
     }
 
     .footer-bottom {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
         margin-top: 50px;
         padding-top: 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -244,6 +249,10 @@
     .footer-bottom p {
         font-size: 0.9rem;
         opacity: 0.8;
+    }
+
+    .footer-bottom a {
+        color: var(--white) 
     }
 
     @media (max-width: 968px) {
